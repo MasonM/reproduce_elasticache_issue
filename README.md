@@ -1,6 +1,7 @@
 This repository contains the code necessary to reproduce an issue with AWS ElastiCache for Redis where the reader endpoint stops responding for ~4 minutes during upgrades. Instructions:
 1. Install packages with `npm install`
 2. Start the SSH tunnel with `BASTION=bastion PRIMARY_ENDPOINT=primary READER_ENDPOINT=reader ./tunnel.sh`
+
    Replace `bastion` with a bastion host with connectivity to the ElastiCache instances, `primary` with the cluster's primary endpoint, and `reader` with the cluster's reader endpoint.
 4. Initialize packet capture with `./tcpdump.sh`, which writes to the file `tcpdump.pcap`
 5. Start the application server with `./run.sh`, which outputs logs to `run.log`
