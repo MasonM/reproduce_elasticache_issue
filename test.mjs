@@ -4,8 +4,6 @@ const primaryHost = 'redis://localhost:51410';
 const readerHost = 'redis://localhost:51409'; 
 
 const ioredisOptions = {
-  //keyPrefix: 'stocklandingpages:',
-  //enableAutoPipelining: true,
   retryStrategy: times => (times > 100 ? false : Math.min(times * 100, 3000)),
   reconnectOnError: (err) => {
     if (err && err.message.includes('READONLY')) {
