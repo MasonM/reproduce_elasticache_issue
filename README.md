@@ -1,5 +1,5 @@
 This repository contains the code necessary to reproduce an issue with AWS ElastiCache for Redis where the reader endpoint stops responding for ~4 minutes during upgrades. Instructions:
-1. Create an ElasticCache for Redis cluster with the following settings:
+1. Create an ElastiCache for Redis cluster with the following settings:
 
    * Region - eu-west-1
    * Redis version - 6.2.6
